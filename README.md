@@ -80,7 +80,6 @@ Me chamo Gustavo Soares Ferreira, tenho 22 anos e sou natural de São Paulo. Atu
 />
 
 
-
 <img 
     align="left" 
     alt="HTML"
@@ -122,7 +121,11 @@ Me chamo Gustavo Soares Ferreira, tenho 22 anos e sou natural de São Paulo. Atu
 <br/>
 <br/>
 
----
+### 📊 Estatísticas
+
+ <img src="https://github-readme-activity-graph.vercel.app/graph?username=gustavosoaresf-dev&radius=16&theme=gruvbox&area=true&order=5&hide_title=false&hide_border=true" height="300" alt="activity-graph graph"  />
+
+ ---
 ### 📍Entre em Contato
 <div> 
   
@@ -145,26 +148,3 @@ Me chamo Gustavo Soares Ferreira, tenho 22 anos e sou natural de São Paulo. Atu
 
   
 </div>
-
-<br/>
-<br/>
-
-### 📊 Estatísticas
-
-<p>
-  <img 
-    align="left" 
-    alt="GitHub Stats" 
-    height="200" 
-    style="padding-right: 10px;" 
-    src="https://github-readme-stats.vercel.app/api?username=gustavosoaresf-dev&show_icons=true&theme=tokyonight&include_all_commits=true&locale=pt-br" 
-  />
-
-<img 
-      align="left" 
-      alt="GitHub Stats" 
-      height="200" 
-      src="https://github-readme-stats.vercel.app/api/top-langs/?username=gustavosoaresf-dev&theme=tokyonight&layout=compact&custom_title=Tecnologias&langs_count=9" 
-  />
-
-</p>
