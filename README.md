@@ -2,8 +2,7 @@
 
 **`Desenvolvedor Back-End`**
 
-Me chamo Gustavo Soares Ferreira, tenho 22 anos e sou natural de São Paulo. Atualmente, estou cursando Sistemas de Informação na UMC.
-
+Me chamo Gustavo Soares Ferreira atualmente graduando em Sistemas de Informação, com foco em desenvolvimento Back-End utilizando Java e Spring Boot. Experiência acadêmica e prática no desenvolvimento de APIs RESTful, integração com bancos de dados relacionais e implementação de autenticação, regras de negócio, testes e deploy em nuvem.
 ---
 ### 🤖 Linguagens e Tecnologias
 
