@@ -3,7 +3,7 @@
 <h3><code> Gustavo Soares~ $ whoami</code></h3>
 
 <p align="center">
-  <img src="./avi-ascii.svg" width="350" alt="ASCII portrait" />
+  <img src="./portrait-gustavo.svg" width="350" alt="ASCII portrait" />
   <img src="./info-card.svg" width="463" alt="Neofetch-style info card" />
 </p>
 

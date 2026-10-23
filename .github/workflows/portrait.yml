@@ -1,6 +1,6 @@
 name: Build ASCII portrait
 
-# Regenerates avi-ascii.svg from assets/photo.jpg (or, if that file does not
+# Regenerates portrait-gustavo.svg from assets/photo.jpg (or, if that file does not
 # exist, from your GitHub avatar). Runs when the photo or the scripts change,
 # or manually from the Actions tab.
 "on":
@@ -45,4 +45,4 @@ jobs:
       - uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: "chore: rebuild ascii portrait [skip ci]"
-          file_pattern: "avi-ascii.svg source-prepped.png"
+          file_pattern: "portrait-gustavo.svg source-prepped.png"

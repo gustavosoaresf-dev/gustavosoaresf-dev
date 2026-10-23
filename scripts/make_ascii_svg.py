@@ -15,7 +15,7 @@ Design: monochrome one light-gray ink (rainbow per-char = static); high
 contrast so the background washes out to the space glyph and only the subject
 prints. STATIC=1 emits a frozen frame for local previews.
 
-Output: avi-ascii.svg
+Output: portrait-gustavo.svg
 """
 import html
 import os
@@ -23,7 +23,7 @@ import os
 from PIL import Image, ImageEnhance
 
 SRC = "source-prepped.png"
-OUT = "avi-ascii.svg"
+OUT = "portrait-gustavo.svg"
 STATIC = bool(os.environ.get("STATIC"))
 
 COLS = 100
