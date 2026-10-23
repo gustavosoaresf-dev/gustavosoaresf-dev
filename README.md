@@ -27,7 +27,7 @@
 | **Architecture** | Object-Oriented Programming, MVC, Modular Monolith, Layered Domains |
 | **Databases** | PostgreSQL, MySQL, SQL Server, MongoDB, Flyway |
 | **Cloud & Infrastructure** | AWS EC2, Azure App Services, Virtual Machines, Blob Storage, SQL Database, Docker |
-| **Frontend** | HTML5, CSS3, React |
+| **Frontend** | HTML5/CSS3, React |
 | **Testing & Tools** | Automated Tests, JaCoCo, Git, GitHub Actions, Data Structures |
 
 
