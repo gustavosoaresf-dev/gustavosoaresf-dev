@@ -13,7 +13,7 @@
 
 <img src="./contrib-heatmap.svg" width="860" alt="Contributions in the last 12 months" />
 
-<br>
+<br><br>
 
 <details>
 <summary><code>gustavosoaresf-dev@github ~ $ cat stack.md</code></summary>
