@@ -22,13 +22,13 @@
 
 | Category | Technologies |
 |---|---|
-| **Languages** | Java 17, Python, JavaScript, TypeScript |
+| **Languages** | Java 8+, Python, JavaScript, TypeScript |
 | **Backend** | Spring Boot, Spring Security (JWT), Spring Data JPA, Hibernate, RESTful APIs |
 | **Architecture** | Object-Oriented Programming, MVC, Modular Monolith, Layered Domains |
 | **Databases** | PostgreSQL, MySQL, SQL Server, MongoDB, Flyway |
 | **Cloud & Infrastructure** | AWS EC2, Azure App Services, Virtual Machines, Blob Storage, SQL Database, Docker |
 | **Frontend** | HTML5, CSS3, React |
-| **Testing & Tools** | Automated Tests, JaCoCo, Git, GitHub Actions, Data Structures, Advanced Excel |
+| **Testing & Tools** | Automated Tests, JaCoCo, Git, GitHub Actions, Data Structures |
 
 
 <br>
@@ -38,7 +38,6 @@
 
 <p align="center">
   <a href="https://linkedin.com/in/gustavo-soaresf">LinkedIn</a> ·
-  <a href="mailto:gu.soaresfdev@gmail.com">Email</a> ·
   Mogi das Cruzes, SP, Brazil
 </p>
 
