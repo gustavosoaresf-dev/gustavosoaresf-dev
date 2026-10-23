@@ -102,7 +102,7 @@ def main() -> None:
         p.append(f'<circle cx="{PAD + i*20}" cy="{TITLEBAR_H/2}" r="8" fill="{dot}"/>')
     p.append(
         f'<text x="{CANVAS_W/2}" y="{TITLEBAR_H/2 + CHROME_FS*0.35:.1f}" fill="{TITLE_TEXT}" '
-        f'font-size="{CHROME_FS}" text-anchor="middle">gustavo-soares-umc@github: ~$ ./portrait.sh</text>'
+        f'font-size="{CHROME_FS}" text-anchor="middle">gustavosoaresf-dev@github: ~$ ./portrait.sh</text>'
     )
 
     font_size = CELL_H * 0.86
@@ -138,12 +138,12 @@ def main() -> None:
     # bottom status bar with a steady blinking cursor
     line_y = TITLEBAR_H + ART_H + PAD * 0.35
     status_y = line_y + STATUS_H * 0.62
-    prefix = "gustavo-soares-umc@github:~$ whoami Gustavo Soares "  # up to the cursor
+    prefix = "gustavosoaresf-dev@github:~$ whoami Gustavo Soares Ferreira "  # up to the cursor
     cursor_x = PAD + len(prefix) * CHROME_FS * 0.6
     p.append(f'<line x1="0" y1="{line_y:.1f}" x2="{CANVAS_W}" y2="{line_y:.1f}" stroke="{FRAME}"/>')
     p.append(
         f'<text x="{PAD}" y="{status_y:.1f}" fill="{TITLE_TEXT}" font-size="{CHROME_FS}">'
-        f'gustavo-soares-umc@github:~$ whoami <tspan fill="{INK}">Gustavo Soares</tspan></text>'
+        f'gustavosoaresf-dev@github:~$ whoami <tspan fill="{INK}">Gustavo Soares Ferreira</tspan></text>'
     )
     p.append(
         f'<rect x="{cursor_x:.0f}" y="{status_y - CHROME_FS*0.8:.1f}" '

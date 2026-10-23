@@ -122,7 +122,7 @@ def main() -> None:
         p.append(f'<circle cx="{PAD + i*16}" cy="{TITLEBAR_H/2}" r="5" fill="{dot}"/>')
     p.append(
         f'<text x="{canvas_w/2}" y="{TITLEBAR_H/2 + 4}" fill="{MUTED}" '
-        f'font-size="12" text-anchor="middle">gustavo-soares-umc@github: ~/contributions --graph</text>'
+        f'font-size="12" text-anchor="middle">gustavosoaresf-dev@github: ~/contributions --graph</text>'
     )
 
     grid_top = TITLEBAR_H + TOP_LABEL_H

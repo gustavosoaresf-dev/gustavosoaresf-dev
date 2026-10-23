@@ -18,7 +18,7 @@ from datetime import datetime, timezone
 import requests
 from bs4 import BeautifulSoup
 
-DEFAULT_USER = "gustavo-soares-umc"
+DEFAULT_USER = "gustavosoaresf-dev"
 OUT = "data/contributions.json"
 URL = "https://github.com/users/{user}/contributions"
 

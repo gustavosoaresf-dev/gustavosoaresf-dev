@@ -14,7 +14,7 @@ import os
 OUT = "info-card.svg"
 STATIC = os.environ.get("STATIC") == "1"
 
-# --- theme: same terminal chrome as avi-ascii.svg (gradient bg, rx=12 frame,
+# --- theme: same terminal chrome as portrait-gustavo.svg (gradient bg, rx=12 frame,
 # divider-line titlebar, bottom status bar) so both panels read as one set ---
 BG = "#0d1117"
 BG2 = "#111722"     # gradient top (matches ascii)
@@ -27,7 +27,7 @@ DIM = "#8b949e"     # dim / dots
 BULLET = "#39d353"
 
 # H chosen so that, at the README widths (ascii 370 / card 490), both panels
-# render the SAME height: avi-ascii is 840x907 -> 399.5px@370; card 620x506 -> 399.5px@490.
+# render the SAME height: portrait is 840x907 -> 399.5px@370; card 620x506 -> 399.5px@490.
 W, H = 620, 506
 PAD = 20            # matches ascii PAD (traffic-light origin)
 PAD_X = 26
@@ -38,22 +38,26 @@ FONT = "ui-monospace,SFMono-Regular,Menlo,Consolas,monospace"
 
 # rows: ("kv", key, value) | ("sec", title, "") | ("bullet", text, "")
 ROWS = [
-    ("head", "gustavo-soares-umc@github", ""),
+    ("head", "gustavosoaresf-dev@github", ""),
     ("sep", "", ""),
-    ("kv", "Role", "Software Engineer"),
-    ("kv", "Local", "São Paulo, Brazil"),
+    ("kv", "Role", "Desenvolvedor Back-End Júnior"),
+    ("kv", "Edu", "Sistemas de Informação - UMC, 2026"),
+    ("kv", "Local", "Mogi das Cruzes, SP"),
     ("gap", "", ""),
-    ("sec", "Stack", ""),
-    ("kv", "Lang", "Java, TypeScript, Python, SQL"),
-    ("kv", "Back", "Spring Boot, Node.js, Hibernate"),
-    ("kv", "Msg", "Kafka, RabbitMQ"),
-    ("kv", "Database", "PostgreSQL, MongoDB, Redis, MySQL"),
-    ("kv", "Infra", "Docker, Kubernetes, AWS, Azure, CI/CD"),
+    ("sec", "Technical Stack", ""),
+    ("kv", "Lang", "Java 17, Python, JavaScript, TypeScript"),
+    ("kv", "Back", "Spring Boot, Security/JWT, REST APIs"),
+    ("kv", "Data", "Spring Data JPA, Hibernate, Flyway"),
+    ("kv", "Database", "PostgreSQL, MySQL, SQL Server, MongoDB"),
+    ("kv", "Cloud", "AWS EC2, Azure App Services, VMs"),
+    ("kv", "Infra", "Azure Blob/SQL Database, Docker"),
+    ("kv", "Frontend", "HTML5/CSS3, React"),
+    ("kv", "Testing", "JaCoCo, automated tests, Git, Actions, Excel"),
     ("gap", "", ""),
-    ("sec", "Highlights", ""),
-    ("bullet", "Distributed systems & event-driven design", ""),
-    ("bullet", "Clean / Hexagonal Architecture, SOLID", ""),
-    ("bullet", "Tests: JUnit 5, Testcontainers, Rest Assured", ""),
+    ("sec", "GymIQ Project", ""),
+    ("bullet", "Java 17 / Spring Boot 3.2.4", ""),
+    ("bullet", "Modular monolith, layers, PostgreSQL, JWT", ""),
+    ("bullet", "Dashboards, risk alerts, AOP, AWS EC2", ""),
 ]
 
 
@@ -88,7 +92,7 @@ def main() -> None:
         f'<circle cx="{PAD+16}" cy="{TITLEBAR_H/2}" r="5" fill="#ffbd2e"/>',
         f'<circle cx="{PAD+32}" cy="{TITLEBAR_H/2}" r="5" fill="#27c93f"/>',
         f'<text x="{W/2:.0f}" y="{TITLEBAR_H/2 + 4:.0f}" fill="{TITLE_TEXT}" '
-        f'text-anchor="middle" font-size="12">gustavo-soares-umc@github: ~$ fastfetch</text>',
+        f'text-anchor="middle" font-size="12">gustavosoaresf-dev@github: ~$ fastfetch</text>',
     ]
 
     y = 58
@@ -143,15 +147,15 @@ def main() -> None:
         y += LINE_H
         i += 1
 
-    # bottom status bar (mirrors avi-ascii.svg): divider + prompt + blinking cursor
+    # bottom status bar (mirrors portrait-gustavo.svg): divider + prompt + blinking cursor
     line_y = H - STATUS_H
     status_y = line_y + 19
-    prefix = "gustavo-soares-umc@github:~$ fastfetch "  # up to the cursor
+    prefix = "gustavosoaresf-dev@github:~$ fastfetch "  # up to the cursor
     cursor_x = PAD + len(prefix) * 13 * 0.6
     out.append(f'<line x1="0" y1="{line_y}" x2="{W}" y2="{line_y}" stroke="{FRAME}"/>')
     out.append(
         f'<text x="{PAD}" y="{status_y}" fill="{TITLE_TEXT}" font-size="13">'
-        f'gustavo-soares-umc@github:~$ <tspan fill="{VAL}">fastfetch</tspan></text>'
+        f'gustavosoaresf-dev@github:~$ <tspan fill="{VAL}">fastfetch</tspan></text>'
     )
     blink = (
         '' if STATIC else
