@@ -7,11 +7,6 @@
   <img src="./info-card.svg" width="463" alt="Neofetch-style info card" />
 </p>
 
-<p align="center">
-  Desenvolvedor Back-End Júnior · Bacharelado em Sistemas de Informação (UMC), conclusão prevista em 2026<br>
-  Java 17 · Spring Boot · APIs RESTful · PostgreSQL · AWS · Azure · Docker
-</p>
-
 <br>
 
 <h3><code>gustavosoaresf-dev@github ~ $ ./contributions.sh</code></h3>
@@ -35,14 +30,9 @@
 | **Frontend** | HTML5, CSS3, React |
 | **Testing & Tools** | Automated Tests, JaCoCo, Git, GitHub Actions, Data Structures, Advanced Excel |
 
-</details>
-
-<details>
-<summary><code>gustavosoaresf-dev@github ~ $ cat gym-iq.md</code></summary>
 
 <br>
 
-**[GymIQ — Sistema de Gestão de Academias](https://github.com/gustavosoaresf-dev/gym-iq-api)** is a course project built with Java 17 and Spring Boot 3.2.4. It uses a modular monolith with layered domains, Spring Data JPA, Hibernate, PostgreSQL, and Flyway. Features include role-based JWT security, academy operations and payments, retention dashboards, risk alerts, audit logging with Spring AOP, scheduled jobs, automated tests, and Docker-based local development. GitHub Actions builds and deploys it to AWS EC2.
 
 </details>
 

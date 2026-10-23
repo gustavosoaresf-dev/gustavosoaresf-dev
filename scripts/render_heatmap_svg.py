@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Render data/contributions.json as an animated 53-week x 7-day heatmap SVG.
+"""Render data/contributions.json as a 53-week x 7-day heatmap SVG.
 
 Classic GitHub calendar of rounded, colored boxes on a green ramp, wrapped in
 terminal chrome (rounded frame, gradient bg, title bar with traffic lights).
@@ -35,11 +35,6 @@ TEXT = "#e6edf3"
 ACCENT = "#22d3ee"
 GREEN = "#39d353"
 GOLD = "#f2cc60"
-
-# reveal timing (one-shot diagonal cascade)
-COL_T = 0.018   # per-column delay (left -> right sweep)
-ROW_T = 0.045   # per-row delay (top -> bottom cascade)
-CELL_DUR = 0.42
 
 MONTHS_PT = ["jan", "fev", "mar", "abr", "mai", "jun",
              "jul", "ago", "set", "out", "nov", "dez"]
@@ -136,11 +131,9 @@ def main() -> None:
         y = grid_top + wi * STEP + CELL * 0.78
         p.append(f'<text x="{PAD}" y="{y:.1f}" fill="{MUTED}" font-size="9">{wname}</text>')
 
-    # boxes -- each grows from its OWN center: scale 0 -> 1 with a slight
-    # overshoot ("pop"), staggered diagonally (once, then freeze). SMIL (not CSS
-    # transform-box, which img-embedded SVGs render unreliably): a <g> translates
-    # to the box center and the rect is drawn centered on (0,0), so animateTransform
-    # scale pivots on that center in every renderer.
+    # Keep cells visible without SVG animation. GitHub sanitizes embedded SVGs
+    # in READMEs and may remove SMIL animations, which otherwise left cells at
+    # opacity="0".
     h = CELL / 2
     for ci, column in enumerate(grid):
         cx = grid_left + ci * STEP + h
@@ -149,22 +142,12 @@ def main() -> None:
                 continue
             date_s, count, lvl = cell
             cy = grid_top + ri * STEP + h
-            delay = ci * COL_T + ri * ROW_T
             word = "contribuição" if count == 1 else "contribuições"
             p.append(
                 f'<g transform="translate({cx},{cy})">'
                 f'<rect x="{-h}" y="{-h}" width="{CELL}" height="{CELL}" rx="2.5" '
-                f'fill="{PALETTE[lvl]}" opacity="0">'
+                f'fill="{PALETTE[lvl]}" opacity="1">'
                 f'<title>{date_s}: {count} {word}</title>'
-                f'<animate attributeName="opacity" from="0" to="1" '
-                f'begin="{delay:.3f}s" dur="0.09s" fill="freeze"/>'
-                # overshoot lives in the VALUES (0 -> 1.15 -> 1); keySplines must
-                # stay within [0,1] or the browser rejects the whole animation and
-                # you get a plain opacity fade instead of a grow.
-                f'<animateTransform attributeName="transform" type="scale" '
-                f'values="0.1;1.15;1" keyTimes="0;0.72;1" calcMode="spline" '
-                f'keySplines="0.22 1 0.36 1;0.33 0 0.66 1" '
-                f'begin="{delay:.3f}s" dur="{CELL_DUR:.2f}s" fill="freeze"/>'
                 f'</rect></g>'
             )
 
@@ -205,7 +188,8 @@ def main() -> None:
              f'{best["count"]}</tspan> em {best["date"]}</text>')
 
     p.append("</svg>")
-    open(OUT, "w").write("".join(p))
+    with open(OUT, "w", encoding="utf-8") as output:
+        output.write("".join(p))
     print(f"[heatmap] wrote {OUT} ({n_cols} weeks, {total} contributions)")
 
 
