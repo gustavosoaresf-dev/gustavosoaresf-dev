@@ -14,50 +14,46 @@ import os
 OUT = "info-card.svg"
 STATIC = os.environ.get("STATIC") == "1"
 
-# --- theme: same terminal chrome as portrait-gustavo.svg (gradient bg, rx=12 frame,
-# divider-line titlebar, bottom status bar) so both panels read as one set ---
+
 BG = "#0d1117"
-BG2 = "#111722"     # gradient top (matches ascii)
-FRAME = "#30363d"   # frame + divider lines
-TITLE_TEXT = "#7d8590"  # titlebar/status muted text
-KEY = "#39d353"     # green keys
-VAL = "#c9d1d9"     # light gray values
-ACCENT = "#58a6ff"  # blue section titles / links
-DIM = "#8b949e"     # dim / dots
+BG2 = "#111722"
+FRAME = "#30363d"
+TITLE_TEXT = "#7d8590"
+KEY = "#39d353"
+VAL = "#c9d1d9"
+ACCENT = "#58a6ff"
+DIM = "#8b949e"
 BULLET = "#39d353"
 
-# H chosen so that, at the README widths (ascii 370 / card 490), both panels
-# render the SAME height: portrait is 840x907 -> 399.5px@370; card 620x506 -> 399.5px@490.
+
 W, H = 620, 506
-PAD = 20            # matches ascii PAD (traffic-light origin)
+PAD = 20
 PAD_X = 26
 LINE_H = 21
 TITLEBAR_H = 30
 STATUS_H = 30
 FONT = "ui-monospace,SFMono-Regular,Menlo,Consolas,monospace"
 
-# rows: ("kv", key, value) | ("sec", title, "") | ("bullet", text, "")
+
 ROWS = [
     ("head", "gustavosoaresf-dev@github", ""),
     ("sep", "", ""),
-    ("kv", "Role", "Desenvolvedor Back-End Júnior"),
+    ("kv", "Role", "Software Enginner"),
     ("kv", "Edu", "Sistemas de Informação - UMC, 2026"),
     ("kv", "Local", "Mogi das Cruzes, SP"),
     ("gap", "", ""),
     ("sec", "Technical Stack", ""),
-    ("kv", "Lang", "Java 17, Python, JavaScript, TypeScript"),
+    ("kv", "Lang", "Java 8+, Python, JavaScript, TypeScript"),
     ("kv", "Back", "Spring Boot, Security/JWT, REST APIs"),
     ("kv", "Data", "Spring Data JPA, Hibernate, Flyway"),
     ("kv", "Database", "PostgreSQL, MySQL, SQL Server, MongoDB"),
     ("kv", "Cloud", "AWS EC2, Azure App Services, VMs"),
     ("kv", "Infra", "Azure Blob/SQL Database, Docker"),
     ("kv", "Frontend", "HTML5/CSS3, React"),
-    ("kv", "Testing", "JaCoCo, automated tests, Git, Actions, Excel"),
+    ("kv", "Testing", "JaCoCo, automated tests, Git, Actions"),
     ("gap", "", ""),
-    ("sec", "GymIQ Project", ""),
-    ("bullet", "Java 17 / Spring Boot 3.2.4", ""),
-    ("bullet", "Modular monolith, layers, PostgreSQL, JWT", ""),
-    ("bullet", "Dashboards, risk alerts, AOP, AWS EC2", ""),
+
+
 ]
 
 
