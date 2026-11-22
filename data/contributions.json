@@ -1,42 +1,7 @@
 {
   "user": "gustavosoaresf-dev",
-  "generated_at": "2026-11-21T14:42:00.419733+00:00",
+  "generated_at": "2026-11-22T14:38:07.212675+00:00",
   "days": [
-    {
-      "date": "2025-11-16",
-      "count": 0,
-      "level": 0
-    },
-    {
-      "date": "2025-11-17",
-      "count": 0,
-      "level": 0
-    },
-    {
-      "date": "2025-11-18",
-      "count": 0,
-      "level": 0
-    },
-    {
-      "date": "2025-11-19",
-      "count": 0,
-      "level": 0
-    },
-    {
-      "date": "2025-11-20",
-      "count": 0,
-      "level": 0
-    },
-    {
-      "date": "2025-11-21",
-      "count": 0,
-      "level": 0
-    },
-    {
-      "date": "2025-11-22",
-      "count": 0,
-      "level": 0
-    },
     {
       "date": "2025-11-23",
       "count": 0,
@@ -1854,14 +1819,19 @@
     },
     {
       "date": "2026-11-21",
+      "count": 1,
+      "level": 1
+    },
+    {
+      "date": "2026-11-22",
       "count": 0,
       "level": 0
     }
   ],
   "stats": {
-    "total": 93,
+    "total": 94,
     "current_streak": 0,
-    "longest_streak": 30,
+    "longest_streak": 31,
     "best_day": {
       "date": "2026-10-23",
       "count": 25
@@ -1879,7 +1849,7 @@
       "2026-08": 3,
       "2026-09": 2,
       "2026-10": 47,
-      "2026-11": 29
+      "2026-11": 30
     }
   }
 }
